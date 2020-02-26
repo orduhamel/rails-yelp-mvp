@@ -1,6 +1,20 @@
-<h1><%= @restaurant.name %></h1>
-<p>Type: <%= @restaurant.category %></p>
-<p>Address: <%= @restaurant.address %></p>
-<p>Phone number: <%= @restaurant.phone_number %></p>
+<div class="container">
+  <div class="row m-4 shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="col">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1><%= @restaurant.name %></h1>
+        <p class="badge badge-secondary"><%= @restaurant.category %></p>
+      </div>
+      <p>
+        <i class="fas fa-map-marker-alt"></i>
+        <%= @restaurant.address %>
+      </p>
+      <p>
+        <i class="fas fa-phone"></i>
+        Phone number: <%= @restaurant.phone_number %>
+      </p>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back to list', restaurants_path %>
+

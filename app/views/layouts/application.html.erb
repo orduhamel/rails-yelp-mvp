@@ -12,7 +12,21 @@
 
   </head>
 
-  <body>
+  <body class="bg-light min-vh-100">
+    <nav class="navbar navbar-expand-sm navbar-light bg-white shadow">
+      <div class="navbar-brand">Yelp</div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/restaurants">Restaurants</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item"><%= link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-primary' %></li>
+      </ul>
+
+    </nav>
+
     <%= yield %>
   </body>
 </html>

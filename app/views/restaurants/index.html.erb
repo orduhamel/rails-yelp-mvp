@@ -1,8 +1,25 @@
-<h1>Restaurants</h1>
-<ul>
+<div class="container">
+  <div class="row row-cols-2 justify-content-center">
     <% @restaurants.each do |restaurant| %>
-    <li>
-      <%= link_to restaurant.name, restaurant_path(restaurant) %>
-    </li>
+    <div class="col">
+      <div class="card m-3">
+        <div class="card-body">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to restaurant.name, restaurant_path(restaurant) %> <span class="badge badge-secondary"><%= restaurant.category %></span></h5>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <%= restaurant.address %>
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <%= restaurant.phone_number %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
+  </div>
+</div>
+<ul>
 </ul>
